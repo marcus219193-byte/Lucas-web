@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
       `Descrição: ${descricao}%0A` +
       `Meu WhatsApp: ${telefone}`;
 
-    const numeroEmpresa = "5586999999999"; // coloque seu número
+    const numeroEmpresa = "5586999999999"; // Troque pelo número real do cliente
 
     window.open(`https://wa.me/${numeroEmpresa}?text=${mensagem}`, "_blank");
   });
