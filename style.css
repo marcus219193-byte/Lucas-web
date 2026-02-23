@@ -2,75 +2,85 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-  background: #0f0f0f;
-  color: #fff;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: white;
+  scroll-behavior: smooth;
 }
 
 .container {
   width: 90%;
   max-width: 1100px;
   margin: auto;
-  padding: 80px 0;
+  padding: 100px 0;
   text-align: center;
 }
 
 .hero {
-  background: linear-gradient(135deg, #000, #1a1a1a);
-  padding: 120px 20px;
+  padding: 140px 20px;
+  background: linear-gradient(135deg, #111, #000);
+  animation: fadeIn 1s ease-in;
 }
 
 .hero h1 {
-  font-size: 38px;
-  margin-bottom: 15px;
+  font-size: 42px;
+  margin-bottom: 20px;
 }
 
 .hero p {
-  margin-bottom: 25px;
   color: #ccc;
+  margin-bottom: 30px;
 }
 
 .btn {
-  background: #e10600;
-  color: #fff;
-  padding: 12px 30px;
-  border-radius: 5px;
+  background: linear-gradient(90deg, #e10600, #ff3c3c);
+  color: white;
+  padding: 14px 35px;
+  border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
+  transition: 0.3s;
   border: none;
   cursor: pointer;
 }
 
 .btn:hover {
-  opacity: 0.9;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,0,0,0.5);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  margin-top: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
 }
 
 .card {
   background: #1c1c1c;
-  padding: 25px;
-  border-radius: 8px;
+  padding: 30px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
 }
 
 .orcamento form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-top: 30px;
+  gap: 18px;
+  margin-top: 40px;
 }
 
 input, select, textarea {
-  padding: 12px;
-  border-radius: 5px;
+  padding: 14px;
+  border-radius: 8px;
   border: none;
 }
 
@@ -84,4 +94,10 @@ input, select, textarea {
   border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
-  }
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
