@@ -1,135 +1,71 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lucas Barbearia</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
-
-body{
-  background:#111;
-  color:#fff;
-}
-
-header{
-  background:#000;
-  padding:40px 20px;
-  text-align:center;
-}
-
-header h1{
-  font-size:2.5rem;
-  color:#00ff88;
-}
-
-.container{
-  max-width:1000px;
-  margin:auto;
-  padding:40px 20px;
-}
-
-.servicos{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-  margin-top:30px;
-}
-
-.card{
-  background:#1b1b1b;
-  padding:20px;
-  border-radius:12px;
-  text-align:center;
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:translateY(-5px);
-  background:#222;
-}
-
-.preco{
-  color:#00ff88;
-  font-size:1.2rem;
-  margin-top:10px;
-  font-weight:bold;
-}
-
-.btn{
-  display:inline-block;
-  margin-top:40px;
-  padding:15px 35px;
-  background:#00ff88;
-  color:#000;
-  text-decoration:none;
-  font-weight:bold;
-  border-radius:40px;
-  transition:0.3s;
-}
-
-.btn:hover{
-  background:#00cc6a;
-}
-
-footer{
-  background:#000;
-  text-align:center;
-  padding:20px;
-  color:#aaa;
-  margin-top:40px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comunicação Visual Profissional</title>
+  <meta name="description" content="Impressão, adesivos, envelopamento e insulfilm. Solicite orçamento rápido.">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-<h1>Lucas Barbearia</h1>
-<p>Sua barbearia de confiança</p>
+<header class="hero">
+  <div class="container">
+    <h1>Comunicação Visual que Gera Impacto</h1>
+    <p>Projetos personalizados para empresas que querem se destacar.</p>
+    <a href="#orcamento" class="btn">Solicitar Orçamento</a>
+  </div>
 </header>
 
-<div class="container">
-
-<h2 style="text-align:center;">Serviços</h2>
-
-<div class="servicos">
-  <div class="card">
-    <h3>Corte</h3>
-    <p class="preco">R$25</p>
+<section class="servicos">
+  <div class="container">
+    <h2>Serviços Especializados</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Impressão Digital</h3>
+        <p>Alta qualidade e durabilidade.</p>
+      </div>
+      <div class="card">
+        <h3>Fachadas e Lonas</h3>
+        <p>Impacto visual para sua marca.</p>
+      </div>
+      <div class="card">
+        <h3>Envelopamento</h3>
+        <p>Transforme veículos em mídia.</p>
+      </div>
+      <div class="card">
+        <h3>Insulfilm</h3>
+        <p>Proteção térmica e estética.</p>
+      </div>
+    </div>
   </div>
+</section>
 
-  <div class="card">
-    <h3>Barba</h3>
-    <p class="preco">R$20</p>
+<section id="orcamento" class="orcamento">
+  <div class="container">
+    <h2>Solicite Seu Orçamento</h2>
+    <form id="formOrcamento">
+      <input type="text" placeholder="Seu nome" required>
+      <input type="tel" placeholder="WhatsApp" required>
+      <select required>
+        <option value="">Selecione o serviço</option>
+        <option>Impressão Digital</option>
+        <option>Fachadas</option>
+        <option>Envelopamento</option>
+        <option>Insulfilm</option>
+      </select>
+      <textarea placeholder="Descreva seu projeto"></textarea>
+      <button type="submit" class="btn">Enviar Pedido</button>
+    </form>
   </div>
+</section>
 
-  <div class="card">
-    <h3>Corte + Barba</h3>
-    <p class="preco">R$40</p>
-  </div>
-</div>
-
-<div style="text-align:center;">
-<a class="btn" href="https://wa.me/5586999999999" target="_blank">
-Agendar pelo WhatsApp
-</a>
-</div>
-
-</div>
+<a href="https://wa.me/5586999999999" class="whatsapp-float">WhatsApp</a>
 
 <footer>
-© 2026 Lucas Barbearia - Todos os direitos reservados
+  <p>© 2026 Comunicação Visual - Todos os direitos reservados</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
